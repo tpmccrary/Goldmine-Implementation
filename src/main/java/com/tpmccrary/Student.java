@@ -5,45 +5,36 @@ import java.util.List;
 /**
  * Class that represents a student.
  */
-public class Student {
+public class Student extends Person{
     
-    private int _id;
-    private String _name;
-    private String _birthDate;
+
+    private String _major;
+    private String _classification;
 
     private List<Course> _courses = new ArrayList<Course>();
 
     public Student(int id, String name, String birthDate)
     {
-        this._id = id;
-        this._name = name;
-        this._birthDate = birthDate;
+        super(id, name, birthDate);
     }
 
-    public int getId()
-    {
-        return this._id;
+    public String getMajor() {
+        return _major;
     }
 
-    public void setId(int givenId)
-    {
-        this._id = givenId;
+
+    public void setMajor(String major) {
+        this._major = major;
     }
 
-    public String getName() {
-        return this._name;
+
+    public String getClassification() {
+        return _classification;
     }
 
-    public void setName(String name) {
-        this._name = name;
-    }
 
-    public String getBirthDate() {
-        return this._birthDate;
-    }
-
-    public void setBirthDate(String birthDate) {
-        this._birthDate = birthDate;
+    public void setClassification(String classification) {
+        this._classification = classification;
     }
 
     public List<Course> getCourses() {
@@ -53,5 +44,4 @@ public class Student {
     public void setCourses(List<Course> _courses) {
         this._courses = _courses;
     }
-
 }
