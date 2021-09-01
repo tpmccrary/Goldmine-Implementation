@@ -6,10 +6,14 @@ import java.util.ArrayList;
 public class Course {
     
     private String _crn;
-    private List<Student> _registeredStudents = new ArrayList<Student>();
     private List<Student> _waitlist = new ArrayList<Student>();
     private String _location;
     private String _time;
+    
+    // Association with Student.
+    private List<Student> _registeredStudents = new ArrayList<Student>();
+    // Association with Professor.
+    private Professor _instructor;
 
     public Course(String crn)
     {
@@ -45,6 +49,14 @@ public class Course {
     }
     public void setTime(String time) {
         this._time = time;
+    }
+
+    public Professor getInstructor() {
+        return _instructor;
+    }
+
+    public void setInstructor(Professor instructor) {
+        this._instructor = instructor;
     }
 
     

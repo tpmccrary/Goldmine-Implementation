@@ -6,20 +6,17 @@ public class Person {
     private String _name;
     private String _birthDate;
 
-    public Person(int id, String name, String birthDate)
-    {
+    public Person(int id, String name, String birthDate) {
         this._id = id;
         this._name = name;
         this._birthDate = birthDate;
     }
 
-    public int getId()
-    {
+    public int getId() {
         return this._id;
     }
 
-    public void setId(int givenId)
-    {
+    public void setId(int givenId) {
         this._id = givenId;
     }
 
