@@ -1,5 +1,8 @@
 package com.tpmccrary;
 
+/**
+ * Class represents payment options.
+ */
 public class PaymentOptions {
     
     private double _amountDue;

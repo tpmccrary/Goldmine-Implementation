@@ -1,5 +1,8 @@
 package com.tpmccrary;
 
+/**
+ * Class represents financial aid.
+ */
 public class FinancialAid {
     
     private String _awardInfo;

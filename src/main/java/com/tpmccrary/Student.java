@@ -17,9 +17,18 @@ public class Student extends Person {
     // Composition with StudentRecords.
     private StudentRecords _studentRecords;
 
-    public Student(int id, String name, String birthDate) {
+    // Aggregation with FinancialAid.
+    private FinancialAid _financialAid;
+
+    // Composition with PaymentOptions.
+    private PaymentOptions _paymentOptions;
+
+    public Student(int id, String name, String birthDate, FinancialAid financialAid) {
+        // Inheritance of Person.
         super(id, name, birthDate);
         this._studentRecords = new StudentRecords();
+        this._financialAid = financialAid;
+        this._paymentOptions = new PaymentOptions();
     }
 
     public String getMajor() {
@@ -54,5 +63,23 @@ public class Student extends Person {
         this._studentRecords = studentRecords;
     }
 
+    public FinancialAid getFinancialAid() {
+        return _financialAid;
+    }
+
+    public void setFinancialAid(FinancialAid financialAid) {
+        this._financialAid = financialAid;
+    }
+
+    public PaymentOptions getPaymentOptions() {
+        return _paymentOptions;
+    }
+
+    public void setPaymentOptions(PaymentOptions paymentOptions) {
+        this._paymentOptions = paymentOptions;
+    }
+
+    
+    
     
 }

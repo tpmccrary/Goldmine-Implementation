@@ -15,6 +15,7 @@ public class Professor extends Person {
     private List<Course> _coursesInstructing = new ArrayList<Course>();
 
     public Professor(int id, String name, String birthDate) {
+        // Inheritance of Person.
         super(id, name, birthDate);
     }
 
