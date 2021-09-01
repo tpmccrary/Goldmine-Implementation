@@ -14,8 +14,12 @@ public class Student extends Person {
     // Association with Course.
     private List<Course> _courses = new ArrayList<Course>();
 
+    // Composition with StudentRecords.
+    private StudentRecords _studentRecords;
+
     public Student(int id, String name, String birthDate) {
         super(id, name, birthDate);
+        this._studentRecords = new StudentRecords();
     }
 
     public String getMajor() {
@@ -41,4 +45,14 @@ public class Student extends Person {
     public void setCourses(List<Course> _courses) {
         this._courses = _courses;
     }
+
+    public StudentRecords getStudentRecords() {
+        return _studentRecords;
+    }
+
+    public void setStudentRecords(StudentRecords studentRecords) {
+        this._studentRecords = studentRecords;
+    }
+
+    
 }
