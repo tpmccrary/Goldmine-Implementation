@@ -22,6 +22,43 @@ public class Course {
         this._crn = crn;
     }
 
+    public boolean isRegistered(int studentId)
+    {
+        for (Student student : _registeredStudents) {
+            if (student.getId() == studentId)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public boolean registerForCourse(Student student)
+    {
+        if (isRegistered(student.getId()) == true)
+        {
+            return true;
+        }
+
+        _registeredStudents.add(student);
+        return true;
+    }
+
+    public boolean dropCourse(int id)
+    {
+        for (Student student : _registeredStudents) {
+            if (student.getId() == id)
+            {
+                _registeredStudents.remove(student);
+                return true;
+            }
+        }
+
+        return false;
+
+    }
+
     public String getCrn() {
         return _crn;
     }
