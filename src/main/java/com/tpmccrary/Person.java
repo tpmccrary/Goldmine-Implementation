@@ -1,5 +1,8 @@
 package com.tpmccrary;
 
+/**
+ * Class represents a person.
+ */
 public class Person {
 
     private int _id;

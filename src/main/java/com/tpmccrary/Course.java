@@ -2,7 +2,9 @@ package com.tpmccrary;
 import java.util.List;
 import java.util.ArrayList;
 
-
+/**
+ * Class represents a course.
+ */
 public class Course {
     
     private String _crn;

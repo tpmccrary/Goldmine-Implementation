@@ -3,6 +3,9 @@ package com.tpmccrary;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class represents a professor.
+ */
 public class Professor extends Person {
 
     private String _highestDegree;
